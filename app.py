@@ -11,7 +11,7 @@ from tensorflow.keras.preprocessing.sequence import pad_sequences
 import numpy as np
 from nltk.stem import PorterStemmer, WordNetLemmatizer, wordnet
 
-app = Flask(__name__)
+flask_app = Flask(__name__)
 porter_stemmer = PorterStemmer()
 wordnet_lemmatizer = WordNetLemmatizer()
 max_words = 2500  # Assuming you want to consider the top 10,000 words
@@ -131,3 +131,6 @@ def predict():
     mbti_string = ''.join(mbti_series)
     print(mbti_string)
     return jsonify({"mbti": mbti_string})
+
+# if __name__ == "__main__":
+#     app.run(debug=True, port=5006)
