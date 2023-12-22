@@ -16,7 +16,7 @@ nltk.download('punkt')
 nltk.download('wordnet')
 nltk.download('averaged_perceptron_tagger')
 
-flask_app = Flask(__name__)
+app = Flask(__name__)
 porter_stemmer = PorterStemmer()
 wordnet_lemmatizer = WordNetLemmatizer()
 max_words = 2500  # Assuming you want to consider the top 10,000 words
@@ -93,11 +93,11 @@ def preprocess_text(long_text, tokenizer, max_len):
     return long_text_padded
 
 
-@flask_app.route("/")
+@app.route("/")
 def Home():
     return {"health_check": "NGENE TO?", "model_version": "OKE?"}
 
-@flask_app.route("/predict", methods=["GET"])
+@app.route("/predict", methods=["GET"])
 def predict():
     # Get the value of 'parameters' from the query string
     values_input = request.args.get('parameters', '')
