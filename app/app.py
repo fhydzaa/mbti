@@ -131,7 +131,3 @@ def predict():
     mbti_string = ''.join(mbti_series)
     print(mbti_string)
     return jsonify({"mbti": mbti_string})
-
-if __name__ == "__main__":
-    app.run(debug=True, port=5002)
-

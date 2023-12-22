@@ -16,7 +16,7 @@ coverage.xml
 *.cover
 *.log
 .git
-.gitignore
+../recommender-model/mbti/.gitignore
 .mypy_cache
 .pytest_cache
 .hypothesis
