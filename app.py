@@ -11,6 +11,11 @@ from tensorflow.keras.preprocessing.sequence import pad_sequences
 import numpy as np
 from nltk.stem import PorterStemmer, WordNetLemmatizer, wordnet
 
+nltk.download('stopwords')
+nltk.download('punkt')
+nltk.download('wordnet')
+nltk.download('averaged_perceptron_tagger')
+
 flask_app = Flask(__name__)
 porter_stemmer = PorterStemmer()
 wordnet_lemmatizer = WordNetLemmatizer()
